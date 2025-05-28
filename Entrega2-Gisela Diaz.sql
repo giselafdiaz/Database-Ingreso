@@ -114,7 +114,7 @@ CREATE TABLE estado_curso_alumnos (
     FOREIGN KEY (id_curso) REFERENCES cursos(id_curso)
 );
 
--- Función para calcular el promedio de notas de un alumno en un curso, año y cuatrimestre
+-- Función para calcular el promedio de notas de un alumno en un curso y en un año específico
 DELIMITER //
 CREATE FUNCTION calcular_promedio_notas(
     alumno_id INT,
@@ -270,7 +270,7 @@ END //
 
 DELIMITER ;
 
--- Vistas analíticas para el impacto de distintos factores en el rendimiento
+-- Vistas para analizar el impacto de distintos factores en el rendimiento académico de los estudiantes
 
 -- Impacto del tipo de curso (suficiencia, regular, intensivo y cuatrimestre)
 CREATE VIEW vista_impacto_tipo_curso AS
